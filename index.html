@@ -3,6 +3,10 @@ title: Home
 layout: default
 ---
 {% assign pets = site.data.pets %}
+<h3>Pets available: {{ pets.size }}</h3>
+<h3>Dogs available: {{ pets | where: 'type', 'dog' | size }}</h3>
+<h3>Cats available: {{ pets | where: 'type', 'cat' | size }}</h3>
+<h3>Parrots available: {{ pets | where: 'type', 'cat' | size }}</h3>
 <div class="text-center my-5">
 
 <h1 class="text-center my-5"> RENT THESE PETS. </h1>
