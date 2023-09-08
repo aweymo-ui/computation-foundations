@@ -17,7 +17,7 @@ layout: default
     <div class="row">
         {% for p in pets %}
         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
-            <div class="card">
+            <div class="card"> {% if p.type == 'dog' %}style= "background:red"{% endif %}>
                 <img class="card-img-top" src="{{ p.image | prepend: 'images/' | relative_url }}" alt="Image of {{ p.name }}, a {{ p.type }}">
                 <div class="card-body text-center">
                     <h4 class="card-title text-dark">{{p.name}}, a {{ p.type }}</h4>
