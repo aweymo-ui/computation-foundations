@@ -15,12 +15,12 @@ layout: default
 
 <div class="container my-4">
     <div class="row">
-        {% for pet in pets %}
+        {% for p in pets %}
         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
             <div class="card">
-                <img class="card-img-top" src="{{ pet.image | prepend: 'images/' |relative_url }}" alt="Image of {{ pet.name }}, a {{ pet.type }}">
+                <img class="card-img-top" src="{{ p.image | prepend: 'images/' |relative_url }}" alt="Image of {{ p.name }}, a {{ p.type }}">
                 <div class="card-body text-center">
-                    <h4 class="card-title text-dark">{{p.name}}, a {{ p.type }}</h4>
+                    <h4 class="card-title text-dark">{{ p.name }}, a {{p.type}}</h4>
                     <p class="card-text">
                         <strong>Age:</strong> {{ p.age }} <br>
                         <strong>Owner:</strong> {{ p.owner }} <br>
