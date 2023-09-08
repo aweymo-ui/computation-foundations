@@ -16,9 +16,9 @@ layout: default
             <div class="card">
                 <img class="card-img-top" src="{{ p.image | prepend: 'images/' | relative_url }}" alt="Image of {{ p.name }}, a {{ p.type }}">
                 <div class="card-body text-center">
-                    <h4 class="card-title text-dark">{{ p.type }}</h4>
+                    <h4 class="card-title text-dark">{{p.name}}</h4>
                     <p class="card-text">
-                        {{p.name}}
+                        {{ p.type }}
                     </p>
                     <p class="card-text">
                         <strong>Age:</strong> {{ p.age }} <br>
